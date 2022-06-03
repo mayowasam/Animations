@@ -1,0 +1,110 @@
+.landinghover__container{
+    overflow: hidden;
+    background-color: #f0eed7;
+    color: #161616;
+}
+
+.landinghover__header{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    padding: 0 2rem;
+}
+
+.landinghover__btn{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.line{
+   
+    width: 30px;
+    height:3px;
+    color:black;
+    background:black
+}
+
+.landinghover__body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.inner__container{
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+    transition: all 1s cubic-bezier(.91, 1, .22, 1) ease-in-out;
+}
+
+.inner__inner__container{
+    margin-top: 20%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid rgb(39, 39, 39, .2);
+
+}
+
+
+.top__section h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.top__section p{
+    padding: .5rem 0;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.bottom__section{
+    font-size: 20rem;
+    margin-bottom: 50px;
+    color: #8f0000
+}
+
+.inner__container:hover .top__section h1,
+ .inner__container:hover .top__section p {
+    transition: all 1s cubic-bezier(.91, 1, .22, 1);
+    color: white
+}
+
+.inner__container:hover .bottom__section {
+    transition: all 1s cubic-bezier(.23, 1, .32, 1);
+    color: white
+}
+
+.inner__container-1:hover{
+    background-image: url(../assets/image1.jpg);
+}
+
+.inner__container-2:hover{
+    background-image: url(../assets/image5.jpg);
+}
+
+.inner__container-3:hover{
+    background-image: url(../assets/image2.jpg);
+}
+
+.inner__container-4:hover{
+    background-image: url(../assets/image4.jpg);
+}
+

@@ -1,0 +1,50 @@
+.horizontal{
+    /* overflow: hidden !important; */
+    width: 400%;
+    height:1000vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.horizontal_section{
+    width: 100vw;
+    height: 100vh;
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.horizontal_section.active {
+    color: orange;
+  }
+.cherry{
+    background: green;
+
+}
+
+.banana{
+    background: green
+
+}
+
+.mango{
+    background: yellow
+
+
+}
+
+.apple{
+    background: red
+
+
+}
+.center-marker {
+    position: fixed;
+    width: 2px;
+    height: 100vh;
+    background: tomato;
+    top: 0;
+    left: calc(50vw - 1px);
+  }

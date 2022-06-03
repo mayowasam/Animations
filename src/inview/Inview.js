@@ -74,9 +74,8 @@ function Inview() {
 
     const [ref, inView, entry] = useInView(options);
 
-    const [reftwo, inViewTwo, entryTwo] = useInView(options);
 
-    const { ref: refthree, inView: inViewThree, entry: entryThree } = useInView({
+    const { ref: reftwo, inView: inViewTwo, entry: entryTwo } = useInView({
         threshold: 0.4,
         rootMargin: "30px 30px",
         onChange: (inView) => {
@@ -111,6 +110,7 @@ function Inview() {
         delay: 3000
     });
 
+    const [refthree, inViewThree, entryThree] = useInView(options);
 
 
 
@@ -142,39 +142,8 @@ function Inview() {
 
     }, [inView])
 
-
     useEffect(() => {
         console.log('inViewTwo ', inViewTwo);
-        if (inViewTwo) {
-            animate.start({
-                x: 0,
-                opacity: 1,
-                color: "rgb(255, 0, 0)",
-                background: "rgb(255, 255, 0)",
-                transition: {
-                    duration: 0.5
-                },
-
-            })
-
-        }
-
-        if (!inViewTwo) {
-            animate.start({
-                x: -1000,
-                opacity: 1,
-                transition: {
-                    duration: 0.5
-                },
-
-            })
-
-        }
-
-    }, [inViewTwo])
-
-    useEffect(() => {
-        console.log('inViewThree ', inViewThree);
 
 
         // if (!inViewThree) {
@@ -189,7 +158,39 @@ function Inview() {
 
         // }
 
+    }, [inViewTwo])
+
+    useEffect(() => {
+        console.log('inViewThree ', inViewThree);
+        if (inViewThree) {
+            animate.start({
+                x: 0,
+                opacity: 1,
+                color: "rgb(255, 0, 0)",
+                background: "rgb(255, 255, 0)",
+                transition: {
+                    duration: 0.5
+                },
+
+            })
+
+        }
+
+        if (!inViewThree) {
+            animate.start({
+                x: -1000,
+                opacity: 1,
+                transition: {
+                    duration: 0.5
+                },
+
+            })
+
+        }
+
     }, [inViewThree])
+
+   
 
 
 
@@ -208,12 +209,28 @@ function Inview() {
 
 
         <main className="inview__main">
-            <section className="inview__section">
-                <img src={motif} alt="" />
-                <h2>texting</h2>
+
+
+            <section
+                className="inview__section">
+                <motion.div 
+                variants={container} 
+                initial="initial" 
+                animate="animate" 
+                className='img'>
+
+                    <motion.img 
+                    variants={children}
+                        src={flower} alt="" />
+
+
+                    <motion.img  
+                    variants={children} 
+                    src={cartoon} alt="" />
+
+                </motion.div>
 
             </section>
-
 
             <section
                 // initial={{x: -1000}}
@@ -222,7 +239,8 @@ function Inview() {
                 // transition={{
                 //     duration: 2
                 // }}
-                className="inview__section" ref={ref}>
+                className="inview__section" 
+                ref={ref}>
                 <motion.div  className='img'>
                     <motion.img
                         animate={control}
@@ -230,20 +248,6 @@ function Inview() {
 
 
                     <motion.img animate={control} src={cartoon} alt="" />
-
-                </motion.div>
-
-            </section>
-
-
-            <section
-                className="inview__section">
-                <motion.div variants={container} initial="initial" animate="animate" className='img'>
-                    <motion.img variants={children}
-                        src={flower} alt="" />
-
-
-                    <motion.img  variants={children} src={cartoon} alt="" />
 
                 </motion.div>
 
@@ -258,7 +262,9 @@ function Inview() {
                 </p>
 
             </section>
-            <section className="inview__section" ref={refthree} >
+
+
+            <section className="inview__section" ref={reftwo} >
                 <motion.p animate={animate}>
                     react-intersection-observer
                     Version Badge GZipped size Test License Downloads
@@ -279,10 +285,12 @@ function Inview() {
 
             </section>
         </main>
-        <aside className="inview__aside" ref={reftwo}>
+
+        <aside className="inview__aside" ref={refthree}>
             <Component animate={animate} />
 
         </aside>
+
         <footer className="inview__footer">
 
         </footer>

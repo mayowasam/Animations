@@ -1,60 +1,8 @@
 *{
   box-sizing: border-box;
 }
-.app{
-  /* text-align: center; */
-  /* border: 2px solid red; */
-  /* margin: 5%; */
-  width: 100vw;
-  height: 100vh;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-.box{
-  width: 200px;
-  height: 200px;
-  background-color: aqua;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
-}
-
-.box-item{
-  width: 50px;
-  height: 50px;
-  padding: 1rem;
-  margin: 0.5rem;
-  background-color: rgb(123, 255, 0);
-}
-
-.text{
-  font-size: 2.5rem;
-}
-
-.letter{
-  display: inline-block;
-}
-
-.filter button{
-  margin:1rem 2rem;
-  min-width: 5rem;
-  padding: 0.5rem 1rem;
-  background: white;
-  color: rgb(28, 36,53);
-  border-radius: 1rem;
-  border:  2px solid rgb(28, 36,53);
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.filter button:active{
-  background: rgb(65, 98,168)!important;
-  color: white !important;
-}
-
-.active{
-  background: rgb(65, 98,168) !important;
-  color: white !important;
-}

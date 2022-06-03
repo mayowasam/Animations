@@ -1,7 +1,7 @@
 import './Parallax.css'
-import flower from '../assets/flower.jpg'
-import note from '../assets/note1.jpg'
-import water from '../assets/water.jpg'
+import flower from '../assets/flower.png'
+import motif from '../assets/motif.png'
+import child from '../assets/child.png'
 import { motion, useViewportScroll, useTransform, useMotionValue } from 'framer-motion'
 
 
@@ -30,21 +30,21 @@ function Parallax() {
     return <div className='parallax'>
         <div className="parallax__section">
             <Box img={flower} speed={2} />
-            <Box img={note} speed={0} />
-            <Box img={water} speed={-2} />
+            <Box img={motif} speed={0} />
+            <Box img={child} speed={-2} />
         </div>
 
 
         <div className="parallax__section">
             <Box img={flower} speed={-2} />
-            <Box img={note} speed={1} />
-            <Box img={water} speed={0} />
+            <Box img={motif} speed={1} />
+            <Box img={child} speed={0} />
         </div>
 
         <div className="parallax__section">
             <Box img={flower} speed={-2} />
-            <Box img={note} speed={1} />
-            <Box img={water} speed={0} />
+            <Box img={motif} speed={1} />
+            <Box img={child} speed={0} />
         </div>
     </div>
 }

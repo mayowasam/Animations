@@ -1,0 +1,70 @@
+.smooth-scroll {
+    overflow: hidden !important;
+    height: 1000vh;
+  }
+  
+  .min-h-100 {
+    min-height: 100vh;
+    border: 2px solid yellow;
+  }
+  
+  section {
+    width: 100vw;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  
+  
+  .red {
+    background: red;
+  }
+  
+  .blue {
+    background: blue;
+  }
+  
+  .green {
+    background: green;
+    min-height: 50vh;
+  }
+  
+  .yellow {
+    background: yellow;
+    min-height: 50vh;
+  }
+  .purple {
+    background: purple;
+  }
+  
+  .pink {
+    background: pink;
+  }
+  
+  .horizontalScrolling {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+  
+  [data-scroll-in-section] {
+    display: inline-flex;
+    padding-right: 50px;
+
+  }
+  
+  .item {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .item + .item {
+    margin-left: 25px;
+  }
+  
+  .sectionLeftAndRight .section-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }

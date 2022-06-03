@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import './Text.css'
 
 
 const textVariant = {
@@ -77,7 +78,6 @@ function Text() {
                 </span>
             ))}
             </p>
-
 
     
         </div>

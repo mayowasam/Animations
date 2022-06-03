@@ -24,7 +24,7 @@
     
 }
 .inview__main{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     line-height: 1.4;
     text-align: justify;
     display: flex;
@@ -52,25 +52,25 @@
           
         } */
 
-.inview__section:nth-child(4){
+.inview__section:nth-child(3){
 display: grid;
 place-items: center;    
   
 }
 
-.inview__section:nth-child(5){
+.inview__section:nth-child(4){
     display: grid;
     place-items: center;    
       
     }
 
-.inview__section h2{
+/* .inview__section h2{
     position: absolute;
     bottom: 1rem;
     left: 2rem;
     font-size: 2rem;
     text-transform: uppercase;
-}
+} */
 
 .inview__section img{
     width: 100%;

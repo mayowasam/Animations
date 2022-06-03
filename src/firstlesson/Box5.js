@@ -1,4 +1,5 @@
 import { motion, useAnimation } from 'framer-motion'
+import './Box.css'
 
 
 
