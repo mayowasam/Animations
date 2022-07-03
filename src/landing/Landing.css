@@ -1,0 +1,170 @@
+.landing__containers{
+    width: 100vw
+    ;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.left__container{
+    border: 2px solid red;
+    background: black;
+    height: 100%;
+    width: 30%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right__container{
+    border: 2px solid purple;
+    position: relative;
+    background: white;
+    height: 100%;
+    width: 70vw;
+    color: black;
+   
+
+}
+
+.first__block{
+    border: 2px solid orange;
+    position: absolute;
+    background: black;
+    width: 0; 
+    height: 100vh;
+    left:0;
+    animation: go-left 2s cubic-bezier(.74, .06, .4, .9) 1.5s;
+}
+
+
+
+@keyframes go-left{
+    0%{
+        left: 0;
+        width: 0;
+    }
+
+    50%{
+        left: 0;
+        width: 100%;
+    }
+
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+
+.center__container{
+    border: 2px solid purple;
+    position: absolute;
+    top: 25vh;
+    left: 15vw;
+    height: 50vh;
+    width: 40vw;
+    background-image: url(../assets/image1.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    box-shadow: 7px 29px 49px 0px rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    padding: 3rem;
+    font-size: 2rem;
+
+}
+
+.info a{
+    text-decoration: none;
+    margin-left: 1rem;
+    color: white;
+}
+
+.story{
+    border: 2px solid blue;
+    position: absolute;
+    height: 60%;
+    left: 30vw;
+    top: 30vh;
+    /* z-index: 2; */
+}
+
+.story h1{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.story p{
+    margin-left: .5rem;
+    font-size: 1.2rem;
+    padding-right: 19rem;
+}
+
+.story p:nth-child(3){
+    /* border: 2px solid purple; */
+    margin-left: 5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.menu__container{
+    /* border: 2px solid purple; */
+
+    position: absolute;
+    top: 3rem;
+    right: 4rem;
+    width: 50px;
+    height: 45px;
+}
+
+/* each line of the menu */
+.menu, 
+.menu::after,
+ .menu::before{
+    width: 50px;
+    height: 6px;
+    background: black;
+
+}
+
+.menu{
+    /* position: relative; */
+    transform: translateY(20px);
+    /* background: black; */
+}
+
+.menu::before{
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+ /* background: black; */
+    background: yellow;
+}
+
+.menu::after{
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    background: red;
+    /* background: black; */
+
+}
+
+.social__container{
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+}
+
+.social{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem
+
+}

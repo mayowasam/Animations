@@ -1,9 +1,9 @@
 import {db} from './db'
+import './Data.css'
+
+
 function Filter({ setData, active ,setActive}){
     // console.log(data);
-
-
-
 
     const handleFilter = (genre) => {
         setActive(genre)

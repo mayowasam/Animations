@@ -1,0 +1,38 @@
+
+
+.panel{
+    width: 100vw;
+    height: 100vh;
+    font-size: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.blue{
+    background: blue;
+
+}
+
+.green{
+    background: green;
+
+}
+
+.red{
+    background: red
+
+}
+
+.orange{
+    background: orange
+
+
+}
+
+.purple{
+    background: purple
+
+
+}

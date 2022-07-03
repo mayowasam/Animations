@@ -199,7 +199,7 @@ max-width: 270px;
     display: none;
 } */
 
-/* .sign__in__form.hide .sign__in__box {
+.sign__in__form.hide .sign__in__box {
     transform: translateX(100%);
     visibility: hidden;
 
@@ -239,7 +239,7 @@ max-width: 270px;
     transition: all .5s ease;
 
 } 
-   */
+  
 
 @media screen and (max-width: 700px){
     .form__container{

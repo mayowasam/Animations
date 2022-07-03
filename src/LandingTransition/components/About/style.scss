@@ -1,0 +1,19 @@
+.about-section {
+  p {
+    font-size: 70px;
+    line-height: 1.12;
+    opacity: 0;
+
+
+    // the splittext , splits all the text in the p tag to divs 
+    // and  i want to hide it 
+    > div {
+      opacity: 0;
+      transform: translateY(0px);
+    }
+    
+    &.is-reveal {
+      opacity: 1;
+    }
+  }
+}

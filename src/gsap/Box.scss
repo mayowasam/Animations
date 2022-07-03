@@ -1,0 +1,39 @@
+.box{
+    width: 225px;
+    height: 120px;
+    border: 2px solid red;
+    position: relative;
+    flex-shrink: 0;
+
+    .smaller{
+        display: none;
+        width: 325px;
+        height: 200px;
+        border: 2px solid blue;
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        right: 0;
+        bottom:0;
+        // transform: translate(50%, 50%);
+        transition: all 4s cubic-bezier(.91, 1, .22, 1) ease-in-out;
+        
+    }
+    &:hover{
+        transition: all 1s cubic-bezier(.91, 1, .22, 1) ease-in-out;
+
+        .smaller{
+            display: block;
+            transition: all 1s cubic-bezier(.91, 1, .22, 1) ease-in-out;
+
+        }
+
+    }
+
+}
+
+
+
+
+
+

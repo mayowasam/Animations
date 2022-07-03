@@ -36,28 +36,28 @@ export default function Form() {
         })
     }, [])
     
-    // useEffect(() => {
-    //     const signUpBtn = document.querySelector('.signup__btn')
-    //     const signInBtn = document.querySelector('.signin__btn')
-    //     const signUpForm = document.querySelector('.sign__up__form')
-    //     const signInForm = document.querySelector('.sign__in__form')
+    useEffect(() => {
+        const signUpBtn = document.querySelector('.signup__btn')
+        const signInBtn = document.querySelector('.signin__btn')
+        const signUpForm = document.querySelector('.sign__up__form')
+        const signInForm = document.querySelector('.sign__in__form')
     
-    //     signUpBtn.addEventListener("click" , (e) => {
-    //         signInForm.classList.add("hide")
-    //         signUpForm.classList.add("show")
-    //         signInForm.classList.remove("show")
+        signUpBtn.addEventListener("click" , (e) => {
+            signInForm.classList.add("hide")
+            signUpForm.classList.add("show")
+            signInForm.classList.remove("show")
 
-    //     })
+        })
 
-    //     signInBtn.addEventListener("click" , (e) => {
-    //         signInForm.classList.remove("hide")
-    //         signUpForm.classList.remove("show")
-    //         signInForm.classList.add("show")
+        signInBtn.addEventListener("click" , (e) => {
+            signInForm.classList.remove("hide")
+            signUpForm.classList.remove("show")
+            signInForm.classList.add("show")
 
 
-    //     })
+        })
 
-    // },[])
+    },[])
 
 
 
@@ -66,8 +66,8 @@ export default function Form() {
     return (
         <div className="main__div">
 
-            {
-                visibleForm ? (
+            {/* {
+                visibleForm ? ( */}
 
 
 
@@ -133,7 +133,7 @@ export default function Form() {
 
                     </div>
 
-                 ) : ( 
+                 {/* ) : (  */}
 
 
                     <div className="form__container sign__up__form">
@@ -215,8 +215,8 @@ export default function Form() {
 
                     </div>
 
-                )
-            } 
+                {/* ) */}
+            {/* }  */}
 
 
 

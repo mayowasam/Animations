@@ -8,7 +8,7 @@ import './Gsap&Loco.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Loco() {
+function GsapExampleLoco() {
     const scrollRef = createRef();
 
     useEffect(() => {
@@ -46,6 +46,7 @@ function Loco() {
 
 
 
+        // for the first, third, fouth section . 
         const sections = gsap.utils.toArray('section')
 
         sections.forEach(function (section) {
@@ -61,6 +62,8 @@ function Loco() {
                 trigger: section,
                 start: section.scrollHeight <= window.innerHeight ? 'top top' : 'bottom bottom',
                 end: '+=100%',
+                        
+                //i want to pin the section so that another section will go  on top of it when i scroll
                 pin: inner, // fix it but put a z-index of zero so that another content will be on the top
                 pinSpacing: false,
                 pinType: 'transform'
@@ -69,6 +72,7 @@ function Loco() {
 
         })
 
+        //for the second section vertical scrolling
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '.rightPinImage img',
@@ -84,6 +88,8 @@ function Loco() {
             }
         });
 
+
+        // for the horizontal section
         const horizontalSections = gsap.utils.toArray('.horizontalScrolling');
 
         horizontalSections.forEach(function ($section) {
@@ -197,4 +203,4 @@ function Loco() {
     )
 }
 
-export default Loco
+export default GsapExampleLoco

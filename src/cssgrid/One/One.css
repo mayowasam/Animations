@@ -1,0 +1,65 @@
+
+
+/* .app{
+    width: 100vw;
+    overflow: hidden;
+} */
+
+header{
+    max-width: 1200px;
+    margin: 40px auto;
+    border-bottom: 1px solid #bbc7c7;
+}
+.grid__container{
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin: 20px auto;
+}
+
+article img{
+    width: 100%;
+    border: 4px solid #fff;
+    border-radius: 8px;
+}
+
+article:nth-child(1){
+    grid-column: span 3; /* make the first article span the entire column */
+
+    display: grid; /* make it a grid too, that has 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid #bbc7c7;
+    padding-bottom: 40px;
+
+}
+article p,
+article h3{
+    margin: 20px 10px;
+}
+
+@media screen and (max-width:980px) {
+    article{
+        grid-column:  span 3; /*span the entire grid */
+
+
+/* make it a grid too, that has 2 columns */
+        display: grid; /* make it a grid too, that has 2 columns */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        align-items: center;
+ 
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    article, article.featured{
+        display:  block; /*span the entire grid */
+        margin: 0 20px; 
+
+
+    }
+}

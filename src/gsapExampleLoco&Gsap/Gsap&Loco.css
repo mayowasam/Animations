@@ -68,3 +68,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .section-inner{
+    border: 5px solid green;
+  }

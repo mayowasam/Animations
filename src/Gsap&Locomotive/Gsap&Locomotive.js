@@ -57,7 +57,10 @@ function GsapAndLocomotive() {
 
         });
 
-        // for just a single div in the entire overflow__container
+
+
+
+        // for second section in the entire overflow__container
 
         let tl = gsap.timeline({ defaults: { ease: "none" } })
             .to(".overflow__circle", { rotation: 360, duration: 1, background: 'red' })
@@ -71,35 +74,15 @@ function GsapAndLocomotive() {
             end: "+=300",
             animation: tl,
             markers: true,
+            pin: true,
             toggleActions: "play none none reverse",
             // toggleActions: "play pause resume reset"
 
         })
 
-        //vertical scrolling
-        const divisions = gsap.utils.toArray('.overflow__grid')
 
-        divisions.forEach(function (division) {
 
-            const inner = division.classList.contains('sectionLeftAndRight') ? division.querySelector('.overflow__img') : division.querySelector('.overflow__grid')
-
-            console.log(division.scrollHeight, division.classList)
-            console.log('inner', inner)
-
-            ScrollTrigger.create({
-
-                scroller: scrollRef.current,
-                trigger: division,
-                start: division.scrollHeight <= window.innerHeight ? 'top top' : 'bottom bottom',
-                end: '+=100%',
-                pin: inner, // fix it but put a z-index of zero so that another content will be on the top
-                pinSpacing: false,
-                pinType: 'transform'
-
-            })
-
-        })
-
+        // for the vertical scrolling third section
         const timeline = gsap.timeline({
             scrollTrigger: {
                 trigger: '.overflow__main img',
@@ -116,10 +99,7 @@ function GsapAndLocomotive() {
         });
 
 
-        // // to do another scroll trigger animation
-        // //i.e  horizontal animation
-
-        // pick the  each of the containers that i want to horizontally
+        // for  horizontal animation fourth section
         const sections = gsap.utils.toArray('.overflow_parallaxbody')
 
         sections.forEach(function (section) {
@@ -219,53 +199,8 @@ function GsapAndLocomotive() {
             </div>
 
 
-            {/* parallax scrolling */}
-            {/* 
-            <div >
 
-                <section className="overflow__section cherry" data-scroll-section>
-                    <span >C</span>
-                    <span>H</span>
-                    <span>E</span>
-                    <span>R</span>
-                    <span>R</span>
-                    <span>Y</span>
-
-
-                </section>
-
-
-                <section className=" overflow__section mango" >
-                    <span>M</span>
-                    <span>A</span>
-                    <span>N</span>
-                    <span>G</span>
-                    <span>O</span>
-                </section>
-
-                <section className="overflow__section apple">
-                    <span>A</span>
-                    <span>P</span>
-                    <span>P</span>
-                    <span>L</span>
-                    <span>E</span>
-                </section>
-
-                <section className="overflow__section banana" >
-                    <span>B</span>
-                    <span>A</span>
-                    <span>N</span>
-                    <span>A</span>
-                    <span>N</span>
-                    <span>A</span>
-                </section>
-
-
-
-            </div> */}
-
-
-            {/* parallax lagging */}
+            {/* horizontal smoot scrolling  */}
 
             <div className='overflow__parallaxcontent' >
 
@@ -289,7 +224,56 @@ function GsapAndLocomotive() {
             </div>
 
 
-            {/* horizontal smoot scrolling  */}
+
+
+
+            {/* parallax scrolling */}
+            {/* <div >
+
+
+
+                <section className="overflow__section cherry">
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6" >C</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">H</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">E</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">R</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.8" data-scroll-speed="6">R</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.6" data-scroll-speed="6">Y</span>
+
+
+                </section>
+
+
+                <section className=" overflow__section mango" >
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">M</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">A</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">N</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">G</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.8" data-scroll-speed="6">O</span>
+                </section>
+
+                <section className="overflow__section apple">
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">A</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">P</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">P</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.8" data-scroll-speed="6">L</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.6" data-scroll-speed="6">E</span>
+                </section>
+
+                <section className="overflow__section banana" >
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.18" data-scroll-speed="6">B</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.14" data-scroll-speed="6">A</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.12" data-scroll-speed="6">N</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.1" data-scroll-speed="6">A</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.8" data-scroll-speed="6">N</span>
+                    <span data-scroll data-scroll-direction="horizontal" data-scroll-delay="0.6" data-scroll-speed="6">A</span>
+                </section>
+
+
+
+            </div> */}
+
+
 
             {/* <div className='overflow__content' >
                 <div>
