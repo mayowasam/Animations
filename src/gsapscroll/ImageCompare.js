@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
 import './ImageCompare.css'
-// import image1 from '../assets/image1.jpg'
-// import image2 from '../assets/image2.jpg'
+import image1 from '../assets/image1.jpg'
+import image2 from '../assets/image2.jpg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,12 +45,12 @@ export default function ImageCompare() {
 
             <section className="comparisonSection">
                 <div className="comparisonImage beforeImage">
-                    <img src="https://assets.codepen.io/16327/before.jpg" alt="before" />
-                    {/* <img src={image1} alt="before" /> */}
+                    {/* <img src="https://assets.codepen.io/16327/before.jpg" alt="before" /> */}
+                    <img src={image1} alt="before" />
                 </div>
                 <div className="comparisonImage afterImage">
-                    <img src="https://assets.codepen.io/16327/after.jpg" alt="after" />
-                    {/* <img src={image2} alt="after" /> */}
+                    {/* <img src="https://assets.codepen.io/16327/after.jpg" alt="after" /> */}
+                    <img src={image2} alt="after" />
                 </div>
             </section>
 

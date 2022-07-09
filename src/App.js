@@ -23,7 +23,7 @@ import From from './gsap/From';
 // import GsapExampleLoco from './gsapExampleLoco&Gsap/Gsap&Loco';
 // import GalleryGrid from './GalleryGrid/GalleryGrid';
 // import CounterLoaderHome from './CounterLoader/containers/CounterLoaderHome';
-import LandingHover from './landingHover/LandingHover';
+// import LandingHover from './landingHover/LandingHover';
 // import Form from './Form/Form';
 // import  Landing  from './landing/Landing';
 // import  LandingFramer from './landing/LandingFramer';
@@ -41,10 +41,12 @@ import LandingHover from './landingHover/LandingHover';
 // import Snapping from './gsapscroll/Snapping';
 // import InfiniteDiv from './gsapscroll/InfiniteDiv';
 // import HorParallax from './gsapscroll/HorParallax';
-import ImageCompare from './gsapscroll/ImageCompare';
+// import ImageCompare from './gsapscroll/ImageCompare';
 // import NavigationComaptiblity from './gsapscroll/NavigationComaptiblity'
 import './App.css';
-import LandingTwo from './landing/LandingTwo';
+// import LandingTwo from './landing/LandingTwo';
+import Good from './Good';
+
 
 function App() {
 
@@ -83,7 +85,7 @@ function App() {
 
         {/* <Landing/> */}
         {/* <LandingFramer/> */}
-        <LandingTwo/>
+        {/* <LandingTwo/> */}
 
 
         {/* <From/> */}
@@ -103,6 +105,7 @@ function App() {
         {/* <HorParallax/> */}
         {/* <ImageCompare/> */}
         {/* <NavigationComaptiblity/> */}
+        <Good/>
 
 
 

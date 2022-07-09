@@ -10,14 +10,14 @@
 .gallery {
   width: 400%;
   height: 80vh;
-  border: 2px solid blue; //
+  // border: 2px solid blue; //
 
   padding: 10vh 0;
   display: flex;
   flex-wrap: nowrap;
 
   .gallery-item-wrapper {
-    // border: 2px solid orange; //
+    border: 2px solid orange; //
     aspect-ratio: 16/9;
     height: 100%;
     display: grid;

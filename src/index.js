@@ -2,7 +2,7 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
-// import App from './App';
+import App from './App';
 // import ImageTransition from './ImageTransition/ImageTransition';
 // import MarqueeApp from './Marquee/MarqueeApp';
 // import App from './Dribble/src/App'
@@ -11,7 +11,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 // import App from './Ecommerce/src/App'
 // import App from './cssgrid/App';
 // import App from './LoaderCombined/App'
-import App  from './LandingTransition/App'
+// import App  from './LandingTransition/App'
 
 import StateProvider from './LoaderCombined/utils/StateProvider';
 

@@ -32,6 +32,7 @@ function Horizontal() {
         // // ScrollTrigger.refresh();
 
         const sections = gsap.utils.toArray(".horizontal_section");
+        console.log("sections", sections);
         let maxWidth = 0;
 
         const getMaxWidth = () => {
